@@ -1,0 +1,55 @@
+[
+  {
+    "id": "q1",
+    "question": "What was the reported revenue for the latest fiscal year?",
+    "expected_pages": [],
+    "gold_keywords": [
+      "revenue"
+    ],
+    "unanswerable": false
+  },
+  {
+    "id": "q2",
+    "question": "What was the net profit for the latest fiscal year?",
+    "expected_pages": [],
+    "gold_keywords": [
+      "profit"
+    ],
+    "unanswerable": false
+  },
+  {
+    "id": "q3",
+    "question": "What was the company's EPS in the latest fiscal year?",
+    "expected_pages": [],
+    "gold_keywords": [
+      "eps"
+    ],
+    "unanswerable": false
+  },
+  {
+    "id": "q4",
+    "question": "How much did the company earn in sales during the year?",
+    "expected_pages": [],
+    "gold_keywords": [
+      "revenue"
+    ],
+    "unanswerable": false
+  },
+  {
+    "id": "q5",
+    "question": "Compare the latest-year revenue of the two selected companies.",
+    "expected_pages": [],
+    "gold_keywords": [
+      "revenue"
+    ],
+    "unanswerable": false,
+    "mode": "Hybrid"
+  },
+  {
+    "id": "q6",
+    "question": "What is the CEO's favourite food?",
+    "expected_pages": [],
+    "gold_keywords": [],
+    "unanswerable": true
+  }
+]
