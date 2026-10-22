@@ -171,12 +171,6 @@ Open the local URL provided in your terminal.
 
 FinSight is an educational project for financial document exploration. It does not provide financial, investment, or legal advice. Always consult the original reports before relying on extracted figures or conclusions.
 
-## 👩‍💻 Author
-
-**Sunidhi**
-
-🐙 GitHub: [@sunidhi76](https://github.com/sunidhi76)
-
 ---
 
 <p align="center">
