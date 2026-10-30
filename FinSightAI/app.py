@@ -461,7 +461,18 @@ else:
                 None,
             )
 
+        # Render saved chat history on every rerun so questions do not disappear.
+        for saved_message in st.session_state.messages:
+            with st.chat_message("user"):
+                st.markdown(saved_message["question"])
+            with st.chat_message("assistant"):
+                st.markdown(saved_message["answer"])
+
         if question:
+            # Show the current question before retrieval and LLM generation begin.
+            with st.chat_message("user"):
+                st.markdown(question)
+
             if compare:
                 available_companies = sorted(
                     {
@@ -517,10 +528,9 @@ else:
                         }
                     )
 
-                    st.markdown(
-                        f"**Using {provider}**"
-                    )
-                    st.markdown(data["answer"])
+                    with st.chat_message("assistant"):
+                        st.markdown(f"**Using {provider}**")
+                        st.markdown(data["answer"])
 
                     comparison_rows = []
 
@@ -605,16 +615,17 @@ else:
                     badge = "Answer generated · verify sources"
                     badge_class = "bad"
 
-                st.markdown(
-                    f'<span class="badge {badge_class}">'
-                    f'{badge}</span> &nbsp; '
-                    f'**Using {provider}**',
-                    unsafe_allow_html=True,
-                )
+                with st.chat_message("assistant"):
+                    st.markdown(
+                        f'<span class="badge {badge_class}">'
+                        f'{badge}</span> &nbsp; '
+                        f'**Using {provider}**',
+                        unsafe_allow_html=True,
+                    )
 
-                st.markdown(
-                    f"### {answer_text}"
-                )
+                    st.markdown(
+                        f"### {answer_text}"
+                    )
 
                 confidence = str(
                     data.get("confidence", "low")
